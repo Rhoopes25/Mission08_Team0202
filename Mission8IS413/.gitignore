@@ -1,1 +1,70 @@
-# add vs file here
+## Visual Studio / .NET Core
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+out/
+publish/
+artifacts/
+
+# NuGet
+packages/
+*.nupkg
+.nuget/
+
+# Rider
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IIS / LocalDB
+.IISExpress/
+*.mdf
+*.ldf
+
+# Debug / profiling
+*.log
+*.vspscc
+
+# Node / front-end
+node_modules/
+bower_components/
+
+# User secrets & environment-specific settings
+appsettings.Development.json
+secrets.json
+secrets/*.json
+Properties/launchSettings.json
+
+# Scaffolding
+ScaffoldingReadMe.txt
+
+# Build artifacts
+bin/
+obj/
+
+# Rider / VS / user files
+*.user
+*.suo
+*.userprefs
+.vs/
+.idea/
+*.sln.DotSettings.user
+
+# NuGet cache file that can be machine-specific
+project.nuget.cache
+
+# OS files
+.DS_Store
+Thumbs.db
