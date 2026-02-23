@@ -1,48 +1,90 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-    tesing commits again
-*@
-@{
-}
+﻿@model TaskModel
 
-@model TaskModel
+<div class="container mt-4">
+    <h1 class="mb-4">Task Editor</h1>
 
-<h1>Task Editor</h1>
+    <form method="post">
+        <input type="hidden" asp-for="TaskId" />
 
-<form method="post">
-    <input type="hidden" asp-for="TaskId" />
+        <!-- Task Name -->
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label asp-for="TaskName" class="form-label"></label>
+            </div>
+            <div class="col-md-6">
+                <input asp-for="TaskName" class="form-control" />
+            </div>
+        </div>
 
-    <label asp-for="TaskName">Task Name: </label>
-    <input asp-for="TaskName" />
-    <br />
-    <label asp-for="TaskDue">Due Date:</label>
-    <input asp-for="TaskDue" type="date" />    
-    <br />
-    <label asp-for="TaskQuadrant">Task Quadrant:</label>
-    <select asp-for="TaskQuadrant">
-        <option value="1">Important / Urgent</option>
-        <option value="2">Important / Not Urgent</option>
-        <option value="3">Not Important / Urgent</option>
-        <option value="4">Not Important / Not Urgent</option>
-    </select>
-    <br />
-    <select asp-for="CategoryId">
-        <option value="">Select a Category</option>
-        @foreach (Category c in ViewBag.categories)
-        {
-            <option value="@c.CategoryId">@c.CategoryId</option>
-        }
-    </select>
-    <br />
-    <label asp-for="TaskCompleted">Completed?</label>
-    <select asp-for="TaskCompleted">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select>
-    <br />
+        <!-- Due Date -->
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label asp-for="TaskDue" class="form-label"></label>
+            </div>
+            <div class="col-md-6">
+                <input asp-for="TaskDue" type="date" class="form-control" />
+            </div>
+        </div>
 
-    <button type="submit">Submit Task</button>
+        <!-- Task Quadrant -->
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label asp-for="TaskQuadrant" class="form-label"></label>
+            </div>
+            <div class="col-md-6">
+                <select asp-for="TaskQuadrant" class="form-select">
+                    <option value="1">Important / Urgent</option>
+                    <option value="2">Important / Not Urgent</option>
+                    <option value="3">Not Important / Urgent</option>
+                    <option value="4">Not Important / Not Urgent</option>
+                </select>
+            </div>
+        </div>
 
-    <div asp-validation-summary="All"></div>
+        <!-- Category -->
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+            </div>
+            <div class="col-md-6">
+                <select asp-for="CategoryId" class="form-select">
+                    <option value="">Select a Category</option>
+                    @foreach (Category c in ViewBag.categories)
+                    {
+                        <option value="@c.CategoryId">@c.CategoryName</option>
+                    }
+                </select>
+            </div>
+        </div>
 
-</form>
+        <!-- Completed -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <label asp-for="TaskCompleted" class="form-label"></label>
+            </div>
+            <div class="col-md-6">
+                <select asp-for="TaskCompleted" class="form-select">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="row">
+            <div class="col-md-9 offset-md-3">
+                <button type="submit" class="btn btn-primary">
+                    Submit Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Validation -->
+        <div class="row mt-3">
+            <div class="col-md-9 offset-md-3">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+        </div>
+
+    </form>
+</div>
