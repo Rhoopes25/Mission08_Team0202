@@ -26,12 +26,12 @@
         <option value="4">Not Important / Not Urgent</option>
     </select>
     <br />
-    <label asp-for="TaskCategory">Task Category:</label>
-    <select asp-for="TaskCategory">
-        <option value="home">Home</option>
-        <option value="school">School</option>
-        <option value="work">Work</option>
-        <option value="church">Church</option>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (Category c in ViewBag.categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryId</option>
+        }
     </select>
     <br />
     <label asp-for="TaskCompleted">Completed?</label>
