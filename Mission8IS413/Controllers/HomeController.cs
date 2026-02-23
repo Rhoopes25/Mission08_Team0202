@@ -11,7 +11,10 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult addTask()
+    public IActionResult AddTask()
+    {
+        return View();
+    }public IActionResult EditTask()
     {
         return View();
     }
