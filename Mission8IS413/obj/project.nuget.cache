@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "O+vUEHEe6k4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj",
+=======
   "dgSpecHash": "shfniIgRiu0=",
   "success": true,
   "projectFilePath": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj",
+>>>>>>> e0851fa91a59961b94907cb850831400060b8521
   "expectedPackageFiles": [],
   "logs": []
 }
