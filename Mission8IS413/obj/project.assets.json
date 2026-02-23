@@ -8,23 +8,39 @@
     "net10.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\William\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\psand\\.nuget\\packages\\": {},
+>>>>>>> e0851fa91a59961b94907cb850831400060b8521
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj",
       "projectName": "Mission8IS413",
       "projectPath": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj",
       "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj",
+      "projectName": "Mission8IS413",
+      "projectPath": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj",
+      "packagesPath": "C:\\Users\\psand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\obj\\",
+>>>>>>> e0851fa91a59961b94907cb850831400060b8521
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\psand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> e0851fa91a59961b94907cb850831400060b8521
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
