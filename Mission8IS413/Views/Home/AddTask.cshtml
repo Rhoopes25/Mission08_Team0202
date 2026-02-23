@@ -1,6 +1,6 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-    tesing commits
+    tesing commits again
 *@
 @{
 }
@@ -16,7 +16,7 @@
     <input asp-for="TaskName" />
     <br />
     <label asp-for="TaskDue">Due Date:</label>
-    <input asp-for"TaskDue" />
+    <input asp-for="TaskDue" type="date" />    
     <br />
     <label asp-for="TaskQuadrant">Task Quadrant:</label>
     <select asp-for="TaskQuadrant">
@@ -26,12 +26,12 @@
         <option value="4">Not Important / Not Urgent</option>
     </select>
     <br />
-    <label asp-for="TaskCategory">Task Category:</label>
-    <select asp-for="TaskCategory">
-        <option value="home">Home</option>
-        <option value="school">School</option>
-        <option value="work">Work</option>
-        <option value="church">Church</option>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (Category c in ViewBag.categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryId</option>
+        }
     </select>
     <br />
     <label asp-for="TaskCompleted">Completed?</label>
