@@ -5,3 +5,44 @@
 @{
 }
 
+@model Task
+
+<h1>Task Editor</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="TaskId" />
+
+    <label asp-for="TaskName">Task Name: </label>
+    <input asp-for="TaskName" />
+    <br />
+    <label asp-for="TaskDue">Due Date:</label>
+    <input asp-for"TaskDue" />
+    <br />
+    <label asp-for="TaskQuadrant">Task Quadrant:</label>
+    <select asp-for="TaskQuadrant">
+        <option value="1">Important / Urgent</option>
+        <option value="2">Important / Not Urgent</option>
+        <option value="3">Not Important / Urgent</option>
+        <option value="4">Not Important / Not Urgent</option>
+    </select>
+    <br />
+    <label asp-for="TaskCategory">Task Category:</label>
+    <select asp-for="TaskCategory">
+        <option value="home">Home</option>
+        <option value="school">School</option>
+        <option value="work">Work</option>
+        <option value="church">Church</option>
+    </select>
+    <br />
+    <label asp-for="TaskCompleted">Completed?</label>
+    <select asp-for="TaskCompleted">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+
+    <button type="submit">Submit Task</button>
+
+    <div asp-validation-summary="All"></div>
+
+</form>
