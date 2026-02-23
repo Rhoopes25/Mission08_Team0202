@@ -11,6 +11,9 @@
 *.suo
 *.userosscache
 *.sln.docstates
+.idea/
+
+
 
 # Build outputs
 bin/
