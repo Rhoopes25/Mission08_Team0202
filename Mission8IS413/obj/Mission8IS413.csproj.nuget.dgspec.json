@@ -1,49 +1,25 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj": {}
+    "/Users/rachelhoopes/RiderProjects/Mission8IS413/Mission8IS413/Mission8IS413.csproj": {}
   },
   "projects": {
-    "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj": {
+    "/Users/rachelhoopes/RiderProjects/Mission8IS413/Mission8IS413/Mission8IS413.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj",
+        "projectUniqueName": "/Users/rachelhoopes/RiderProjects/Mission8IS413/Mission8IS413/Mission8IS413.csproj",
         "projectName": "Mission8IS413",
-        "projectPath": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\Mission8IS413.csproj",
-        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\William\\source\\repos\\Mission8IS413\\Mission8IS413\\obj\\",
-=======
-    "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj",
-        "projectName": "Mission8IS413",
-        "projectPath": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\Mission8IS413.csproj",
-        "packagesPath": "C:\\Users\\psand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\psand\\source\\repos\\Mission08_Team0202\\Mission8IS413\\obj\\",
->>>>>>> e0851fa91a59961b94907cb850831400060b8521
+        "projectPath": "/Users/rachelhoopes/RiderProjects/Mission8IS413/Mission8IS413/Mission8IS413.csproj",
+        "packagesPath": "/Users/rachelhoopes/.nuget/packages/",
+        "outputPath": "/Users/rachelhoopes/RiderProjects/Mission8IS413/Mission8IS413/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\psand\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> e0851fa91a59961b94907cb850831400060b8521
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/rachelhoopes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
