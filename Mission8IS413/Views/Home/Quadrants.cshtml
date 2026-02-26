@@ -18,7 +18,7 @@
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-danger mb-2">Q1</span>
 
-                @foreach (var task in Model.Where(t => t.TaskQuadrant == 1))
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 1 && t.TaskCompleted == false))
                 {
                     <div class="card border-start border-danger border-4 mb-2">
                         <div class="card-body p-2 d-flex justify-content-between align-items-center">
@@ -51,7 +51,7 @@
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-warning text-dark mb-2">Q2</span>
 
-                @foreach (var task in Model.Where(t => t.TaskQuadrant == 2))
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 2 && t.TaskCompleted == false))
                 {
                     <div class="card border-start border-danger border-4 mb-2">
                         <div class="card-body p-2 d-flex justify-content-between align-items-center">
@@ -90,7 +90,7 @@
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-info mb-2">Q3</span>
 
-                @foreach (var task in Model.Where(t => t.TaskQuadrant == 3))
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 3 && t.TaskCompleted == false))
                 {
                     <div class="card border-start border-danger border-4 mb-2">
                         <div class="card-body p-2 d-flex justify-content-between align-items-center">
@@ -121,8 +121,9 @@
             </div>
 
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
-                <span class="badge bg-secondary mb-2">Q4</span
-                @foreach (var task in Model.Where(t => t.TaskQuadrant == 4))
+                <span class="badge bg-secondary mb-2">Q4</span>
+
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 4 && t.TaskCompleted == false))
                 {
                     <div class="card border-start border-danger border-4 mb-2">
                         <div class="card-body p-2 d-flex justify-content-between align-items-center">
