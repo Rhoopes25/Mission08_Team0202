@@ -1,6 +1,7 @@
-﻿<head>
-    <title>Quadrants</title>
-    
+﻿@model IEnumerable<Mission8IS413.Models.TaskModel>
+
+<head>
+    <title>Quadrants</title>    
 </head>
 <body>
     <div class="container py-5">
@@ -16,30 +17,68 @@
 
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-danger mb-2">Q1</span>
-                <div class="card border-start border-danger border-4 mb-2">
-                    <div class="card-body p-2 d-flex justify-content-between align-items-center">
-                        <div>
-                            <h6 class="mb-0">Fix Server Crash</h6>
-                            <small class="text-muted">Due: 2h</small>
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-success" title="Approve">
-                                <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">check</span>
-                            </button>
-                            <button class="btn btn-sm btn-outline-primary" title="Edit">
-                                <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">edit</span>
-                            </button>
-                            <button class="btn btn-sm btn-outline-danger" title="Delete">
-                                <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">close</span>
-                            </button>
+
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 1))
+                {
+                    <div class="card border-start border-danger border-4 mb-2">
+                        <div class="card-body p-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">@task.TaskName</h6>
+
+                                <small class="text-muted">Due: @task.TaskDue | @task.TaskCategory?.CategoryName</small>
+                            </div>
+                            <div class="btn-group">
+                                <form method="post" asp-controller="Home" asp-action="MarkComplete" class="d-inline">
+                                    <input type="hidden" name="id" value="@task.TaskId" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success" title="Mark Complete">
+                                        <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">check</span>
+                                    </button>
+                                </form>
+
+                                <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-primary" title="Edit">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">edit</span>
+                                </a>
+
+                                <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-danger" title="Delete">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">delete</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
 
-            <div class="col-5 border p-3 bg-white shadow-sm">
+            <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-warning text-dark mb-2">Q2</span>
-                <p class="text-center text-muted mt-4">No tasks here.</p>
+
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 2))
+                {
+                    <div class="card border-start border-danger border-4 mb-2">
+                        <div class="card-body p-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">@task.TaskName</h6>
+
+                                <small class="text-muted">Due: @task.TaskDue | @task.TaskCategory?.CategoryName</small>
+                            </div>
+                            <div class="btn-group">
+                                <form method="post" asp-controller="Home" asp-action="MarkTaskComplete" class="d-inline">
+                                    <input type="hidden" name="id" value="@task.TaskId" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success" title="Mark Complete">
+                                        <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">check</span>
+                                    </button>
+                                </form>
+
+                                <a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-primary" title="Edit">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">edit</span>
+                                </a>
+
+                                <a asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-danger" title="Delete">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
 
@@ -50,10 +89,67 @@
 
             <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
                 <span class="badge bg-info mb-2">Q3</span>
+
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 3))
+                {
+                    <div class="card border-start border-danger border-4 mb-2">
+                        <div class="card-body p-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">@task.TaskName</h6>
+
+                                <small class="text-muted">Due: @task.TaskDue | @task.TaskCategory?.CategoryName</small>
+                            </div>
+                            <div class="btn-group">
+                                <form method="post" asp-controller="Home" asp-action="MarkTaskComplete" class="d-inline">
+                                    <input type="hidden" name="id" value="@task.TaskId" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success" title="Mark Complete">
+                                        <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">check</span>
+                                    </button>
+                                </form>
+
+                                <a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-primary" title="Edit">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">edit</span>
+                                </a>
+
+                                <a asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-danger" title="Delete">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
 
-            <div class="col-5 border p-3 bg-white shadow-sm">
-                <span class="badge bg-secondary mb-2">Q4</span>
+            <div class="col-5 border p-3 bg-white shadow-sm" style="min-height: 250px;">
+                <span class="badge bg-secondary mb-2">Q4</span
+                @foreach (var task in Model.Where(t => t.TaskQuadrant == 4))
+                {
+                    <div class="card border-start border-danger border-4 mb-2">
+                        <div class="card-body p-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">@task.TaskName</h6>
+
+                                <small class="text-muted">Due: @task.TaskDue | @task.TaskCategory?.CategoryName</small>
+                            </div>
+                            <div class="btn-group">
+                                <form method="post" asp-controller="Home" asp-action="MarkTaskComplete" class="d-inline">
+                                    <input type="hidden" name="id" value="@task.TaskId" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success" title="Mark Complete">
+                                        <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">check</span>
+                                    </button>
+                                </form>
+
+                                <a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-primary" title="Edit">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">edit</span>
+                                </a>
+
+                                <a asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId" class="btn btn-sm btn-outline-danger" title="Delete">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     </div>
