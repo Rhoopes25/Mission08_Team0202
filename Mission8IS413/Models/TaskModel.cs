@@ -9,13 +9,13 @@ namespace Mission8IS413.Models
         public int TaskId { get; set; }
 
         [Required(ErrorMessage = "Please enter a task name.")]
-        public string TaskName { get; set; }
-        public DateOnly TaskDue { get; set; }
+        public string TaskName { get; set; } = "";
+        public DateTime? TaskDue { get; set; }
 
         [Required(ErrorMessage = "Please enter a task Quadrant.")]
         public int TaskQuadrant { get; set; }
 
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
         public Category? TaskCategory { get; set; }

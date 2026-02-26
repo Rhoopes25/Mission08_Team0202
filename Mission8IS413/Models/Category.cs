@@ -9,5 +9,7 @@ namespace Mission8IS413.Models
 
         [Required]
         public string CategoryName { get; set; } = "";
+
+        
     }
 }
