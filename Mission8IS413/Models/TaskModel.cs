@@ -19,6 +19,7 @@ namespace Mission8IS413.Models
 
         [ForeignKey("CategoryId")]
         public Category? TaskCategory { get; set; }
+
         public bool TaskCompleted { get; set; }
     }
 }
