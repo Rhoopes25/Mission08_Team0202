@@ -1,35 +1,38 @@
-﻿@model TaskModel
+﻿@model Mission8IS413.Models.TaskModel
 
 <div class="container mt-4">
     <h1 class="mb-4">Task Editor</h1>
 
     <form method="post">
+        @Html.AntiForgeryToken()
         <input type="hidden" asp-for="TaskId" />
 
         <!-- Task Name -->
         <div class="row mb-3">
             <div class="col-md-3">
-                <label asp-for="TaskName" class="form-label"></label>
+                <label asp-for="TaskName" class="form-label">TaskName</label>
             </div>
             <div class="col-md-6">
                 <input asp-for="TaskName" class="form-control" />
+                <span asp-validation-for="TaskName" class="text-danger"></span>
             </div>
         </div>
 
         <!-- Due Date -->
         <div class="row mb-3">
             <div class="col-md-3">
-                <label asp-for="TaskDue" class="form-label"></label>
+                <label asp-for="TaskDue" class="form-label">TaskDue</label>
             </div>
             <div class="col-md-6">
                 <input asp-for="TaskDue" type="date" class="form-control" />
+                <span asp-validation-for="TaskDue" class="text-danger"></span>
             </div>
         </div>
 
         <!-- Task Quadrant -->
         <div class="row mb-3">
             <div class="col-md-3">
-                <label asp-for="TaskQuadrant" class="form-label"></label>
+                <label asp-for="TaskQuadrant" class="form-label">TaskQuadrant</label>
             </div>
             <div class="col-md-6">
                 <select asp-for="TaskQuadrant" class="form-select">
@@ -38,6 +41,7 @@
                     <option value="3">Not Important / Urgent</option>
                     <option value="4">Not Important / Not Urgent</option>
                 </select>
+                <span asp-validation-for="TaskQuadrant" class="text-danger"></span>
             </div>
         </div>
 
@@ -47,26 +51,25 @@
                 <label asp-for="CategoryId" class="form-label">Category</label>
             </div>
             <div class="col-md-6">
-                <select asp-for="CategoryId" class="form-select">
+                <!-- use asp-items to bind the SelectList from the controller -->
+                <select asp-for="CategoryId" asp-items="ViewBag.categories" class="form-select">
                     <option value="">Select a Category</option>
-                    @foreach (Category c in ViewBag.categories)
-                    {
-                        <option value="@c.CategoryId">@c.CategoryName</option>
-                    }
                 </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
         </div>
 
         <!-- Completed -->
         <div class="row mb-4">
             <div class="col-md-3">
-                <label asp-for="TaskCompleted" class="form-label"></label>
+                <label asp-for="TaskCompleted" class="form-label">TaskCompleted</label>
             </div>
             <div class="col-md-6">
                 <select asp-for="TaskCompleted" class="form-select">
-                    <option value="true">Yes</option>
                     <option value="false">No</option>
+                    <option value="true">Yes</option>
                 </select>
+                <span asp-validation-for="TaskCompleted" class="text-danger"></span>
             </div>
         </div>
 
@@ -88,3 +91,7 @@
 
     </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
